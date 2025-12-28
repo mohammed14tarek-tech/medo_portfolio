@@ -2,51 +2,166 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>Portfolio | MEDO EDIT</title>
+<title>MEDO EDIT | Video Editor</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#111;color:#fff}
-header{text-align:center;padding:60px 20px;background:linear-gradient(135deg,#0d6efd,#5aa0ff)}
-section{padding:40px 20px;max-width:1200px;margin:auto}
-h2{text-align:center;color:#5aa0ff}
-.portfolio{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.video-card{background:#1c1c1c;padding:15px;border-radius:12px}
-.video-card iframe,.video-card video{width:100%;border-radius:8px}
-.contact{text-align:center}
-.contact a{display:inline-block;margin:10px;padding:12px 25px;background:#0d6efd;color:#fff;text-decoration:none;border-radius:25px}
-footer{text-align:center;padding:20px;background:#000}
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#111;
+    color:#fff;
+    direction:rtl;
+}
+
+/* Header */
+header{
+    text-align:center;
+    padding:60px 20px;
+    background:linear-gradient(135deg,#0d6efd,#5aa0ff);
+}
+header h1{margin:0;font-size:36px}
+header p{font-size:18px}
+
+/* Sections */
+section{
+    padding:40px 20px;
+    max-width:1200px;
+    margin:auto;
+}
+h2{
+    text-align:center;
+    color:#5aa0ff;
+    margin-bottom:25px;
+}
+
+/* About */
+.about{
+    text-align:center;
+    font-size:18px;
+    line-height:1.9;
+    max-width:800px;
+    margin:auto;
+}
+
+/* Reels Gallery */
+.reels{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.reel-card{
+    background:#1c1c1c;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.5);
+    transition:transform 0.3s;
+}
+.reel-card:hover{
+    transform:translateY(-6px);
+}
+
+.reel-card iframe,
+.reel-card video{
+    width:100%;
+    height:390px;
+    object-fit:cover;
+    border:none;
+}
+
+.reel-title{
+    padding:10px;
+    text-align:center;
+    font-weight:bold;
+}
+
+/* Contact */
+.contact{
+    text-align:center;
+}
+.contact a{
+    display:inline-block;
+    padding:14px 30px;
+    background:#0d6efd;
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    font-size:18px;
+}
+.contact a:hover{
+    background:#5aa0ff;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#000;
+    font-size:14px;
+}
+
+/* Mobile */
+@media(max-width:600px){
+    .reel-card iframe,
+    .reel-card video{
+        height:450px;
+    }
+}
 </style>
 </head>
+
 <body>
+
 <header>
-<h1>MEDO | Video Editor</h1>
-<p>مونتاج ريلز – جيمينج – فيديوهات احترافية</p>
+    <h1>MEDO EDIT</h1>
+    <p>Video Editor | Reels & Short Videos</p>
 </header>
 
 <section>
-<h2>أعمالي</h2>
-<div class="portfolio">
-<div class="video-card">
-<iframe src="https://www.instagram.com/reel/DLhe7hmChTR/embed"></iframe>
-</div>
-<div class="video-card">
-<iframe src="https://www.instagram.com/reel/DScbptJDHj2/embed"></iframe>
-</div>
-<div class="video-card">
-<video controls>
-<source src="https://drive.google.com/uc?export=download&id=1HXH_uXjP2Y950swDld85kuK4BRaKhIBV" type="video/mp4">
-</video>
-</div>
-</div>
+    <h2>نبذة عني</h2>
+    <p class="about">
+        أنا فيديو إيديتور متخصص في مونتاج الريلز والفيديوهات القصيرة باحترافية عالية
+        تناسب منصات السوشيال ميديا. أركز على الإيقاع، الجذب البصري،
+        وتحسين جودة المحتوى لزيادة التفاعل والمشاهدات،
+        مع فهم قوي لطبيعة المحتوى والتريندات.
+    </p>
 </section>
 
 <section>
-<h2>تواصل معي</h2>
-<div class="contact">
-<a href="https://wa.me/20109321538">واتساب مباشر</a>
-</div>
+    <h2>معرض أعمالي</h2>
+    <div class="reels">
+
+        <div class="reel-card">
+            <iframe src="https://www.instagram.com/reel/DLhe7hmChTR/embed" allowfullscreen></iframe>
+            <div class="reel-title">Reels Edit</div>
+        </div>
+
+        <div class="reel-card">
+            <iframe src="https://www.instagram.com/reel/DScbptJDHj2/embed" allowfullscreen></iframe>
+            <div class="reel-title">Reels Edit</div>
+        </div>
+
+        <div class="reel-card">
+            <video controls muted>
+                <source src="https://drive.google.com/uc?export=download&id=1HXH_uXjP2Y950swDld85kuK4BRaKhIBV" type="video/mp4">
+            </video>
+            <div class="reel-title">Short Video</div>
+        </div>
+
+    </div>
 </section>
 
-<footer>© 2025 MEDO EDIT</footer>
+<section>
+    <h2>تواصل معي</h2>
+    <div class="contact">
+        <a href="https://wa.me/20109321538" target="_blank">💬 واتساب مباشر</a>
+    </div>
+</section>
+
+<footer>
+    © 2025 MEDO EDIT – All Rights Reserved
+</footer>
+
 </body>
 </html>

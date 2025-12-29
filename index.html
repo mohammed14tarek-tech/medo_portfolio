@@ -5,14 +5,13 @@
 <title>MEDO EDIT | Video Editor</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Font Awesome لأيقونات واتساب وتيك توك -->
+<!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<!-- Google Fonts -->
+<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Cairo:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-/* Reset */
 *{
     margin:0;
     padding:0;
@@ -20,14 +19,13 @@
 }
 
 body{
-    background:#0a0a17; /* خلفية الموقع الرئيسية */
-    color:#cfe8ff;
+    background:#0b0f3a; /* نفس درجة الصورة */
+    color:#d6e4ff;
     font-family:'Cairo', sans-serif;
     direction:rtl;
-    overflow-x:hidden;
 }
 
-/* Animations */
+/* Animation */
 @keyframes fadeUp{
     from{opacity:0; transform:translateY(40px);}
     to{opacity:1; transform:translateY(0);}
@@ -35,39 +33,38 @@ body{
 
 /* Header */
 header{
+    background:#0b0f3a;
     text-align:center;
-    padding:80px 20px;
+    padding:90px 20px;
     animation:fadeUp 1s ease;
-    background:#14142b; /* خلفية الهيدر كحلي غامق */
-    border-radius:0 0 20px 20px;
 }
 
 header h1{
     font-family:'Montserrat', sans-serif;
-    font-size:48px;
-    letter-spacing:2px;
+    font-size:52px;
     color:#4da3ff;
-    margin-bottom:15px;
+    letter-spacing:3px;
 }
 
 header p{
+    margin-top:15px;
+    color:#a9c8ff;
     font-size:18px;
-    color:#9fc5ff;
 }
 
 /* Sections */
 section{
-    padding:60px 20px;
     max-width:1200px;
     margin:auto;
+    padding:70px 20px;
     animation:fadeUp 1.2s ease;
 }
 
 h2{
     text-align:center;
     margin-bottom:40px;
-    font-size:32px;
     color:#4da3ff;
+    font-size:32px;
 }
 
 /* About */
@@ -75,12 +72,11 @@ h2{
     text-align:center;
     font-size:18px;
     line-height:1.9;
-    color:#bcdcff;
     max-width:900px;
     margin:auto;
 }
 
-/* Portfolio Reels */
+/* Portfolio */
 .portfolio{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -88,15 +84,15 @@ h2{
 }
 
 .reel{
-    background:#15234f; /* كحلي أفتح قليل للفيديو */
+    background:#12165a;
     border-radius:18px;
     overflow:hidden;
     transition:0.4s;
 }
 
 .reel:hover{
-    transform:translateY(-8px) scale(1.02);
-    box-shadow:0 0 30px rgba(77,163,255,0.4);
+    transform:scale(1.03);
+    box-shadow:0 0 30px rgba(77,163,255,0.5);
 }
 
 .reel iframe,
@@ -104,53 +100,58 @@ h2{
     width:100%;
     height:420px;
     border:none;
-    object-fit:cover;
+}
+
+/* Drive Button */
+.drive-btn{
+    display:block;
+    width:fit-content;
+    margin:40px auto 0;
+    padding:14px 28px;
+    background:linear-gradient(135deg,#4da3ff,#1e3a8a);
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.drive-btn:hover{
+    transform:scale(1.07);
+    box-shadow:0 0 25px rgba(77,163,255,0.7);
 }
 
 /* Contact */
 .contact-buttons{
     display:flex;
     justify-content:center;
-    align-items:center;
     gap:18px;
-    margin-top:20px;
 }
 
-.btn-whatsapp,
-.btn-icon{
+.icon-btn{
     width:56px;
     height:56px;
     border-radius:50%;
+    background:linear-gradient(135deg,#4da3ff,#1e3a8a);
     display:flex;
     align-items:center;
     justify-content:center;
     color:white;
     font-size:22px;
-    text-decoration:none;
     transition:0.3s;
-    background:linear-gradient(135deg,#4da3ff,#1e3a8a);
 }
 
-.btn-whatsapp:hover,
-.btn-icon:hover{
-    transform:scale(1.08);
-    box-shadow:0 0 25px rgba(77,163,255,0.7);
+.icon-btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 25px rgba(77,163,255,0.8);
 }
 
 /* Footer */
 footer{
     text-align:center;
     padding:25px;
-    color:#6fa8ff;
+    color:#8fb7ff;
     font-size:14px;
-    background:#0a0a17; /* نفس خلفية الموقع الرئيسية */
-}
-
-/* Mobile */
-@media(max-width:600px){
-    header h1{font-size:34px;}
-    .reel iframe,
-    .reel video{height:460px;}
 }
 </style>
 </head>
@@ -166,39 +167,47 @@ footer{
     <h2>نبذة عني</h2>
     <p class="about">
         أنا فيديو إيديتور متخصص في مونتاج الريلز وصناعة المحتوى القصير
-        بأسلوب جذاب وحديث يساعد على زيادة التفاعل والمشاهدات.
-        أركز على الإيقاع السريع، الترانزيشن الاحترافي،
-        وإبراز اللحظات القوية اللي تخلي الفيديو يمسك المشاهد من أول ثانية.
+        بأسلوب احترافي يساعد على زيادة التفاعل والمشاهدات،
+        مع اهتمام قوي بالإيقاع، الترانزيشن، وإبراز اللحظات المؤثرة.
     </p>
 </section>
 
 <section>
     <h2>معرض أعمالي</h2>
-    <div class="portfolio">
 
-        <!-- Reel 1 -->
+    <div class="portfolio">
         <div class="reel">
             <iframe src="https://www.instagram.com/reel/DLhe7hmChTR/embed" allowfullscreen></iframe>
         </div>
 
-        <!-- Reel 2 -->
         <div class="reel">
             <iframe src="https://www.instagram.com/reel/DScbptJDHj2/embed" allowfullscreen></iframe>
         </div>
-
-        <!-- Google Drive Video -->
-        <div class="reel">
-            <video controls>
-                <source src="https://drive.google.com/uc?id=1HXH_uXjP2Y950swDld85kuK4BRaKhIBV" type="video/mp4">
-            </video>
-        </div>
-
     </div>
+
+    <!-- Drive Portfolio Link -->
+    <a class="drive-btn" href="https://drive.google.com/drive/folders/1bSn4Gox_d4w3Rj4PWijOJIJroOg6LZ9K" target="_blank">
+        مشاهدة جميع الأعمال    </a>
 </section>
 
 <section>
     <h2>تواصل معي</h2>
     <div class="contact-buttons">
+        <a class="icon-btn" href="https://wa.me/201093215338" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a class="icon-btn" href="https://tiktok.com/@medo.edit.555" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+    </div>
+</section>
+
+<footer>
+    © 2025 MEDO EDIT – All Rights Reserved
+</footer>
+
+</body>
+</html><div class="contact-buttons">
 
         <!-- زر واتساب أيقونة فقط -->
         <a href="https://wa.me/201093215338" target="_blank" class="btn-whatsapp">
